@@ -100,7 +100,7 @@ export default async function Event({ params }) {
           href={post.metadata.link}
           className="bg-gradient-to-tr from-purple-800 to-purple-600 text-white font-medium px-4 py-2 rounded-md text-sm float-right flex items-center justify-center gap-x-2 !mb-5 sm:w-auto w-full"
         >
-          Add to Calendar <ArrowIcon />
+          Join now <ArrowIcon />
         </Link>
       )}
       <article className="prose">
