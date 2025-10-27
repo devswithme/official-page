@@ -11,7 +11,7 @@ export default function Page() {
 
   return (
     <section>
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Event</h1>
+      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Events</h1>
       <Posts posts={event} path="event" />
     </section>
   );

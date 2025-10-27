@@ -1,13 +1,19 @@
 import fs from "fs";
 import path from "path";
 
-type Metadata = {
+interface Metadata {
   title: string;
   publishedAt: string;
   person: string;
   link?: string;
   image?: string;
-};
+}
+
+interface TalentMetaData extends Metadata {
+  name: string;
+  role: string;
+  class: string;
+}
 
 function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
@@ -78,6 +84,16 @@ function getLatestPost(dir) {
 
 export function getBlogPosts() {
   return getMDXData(path.join(process.cwd(), "app", "(main)", "blog", "posts"));
+}
+
+export function getTalentPosts() {
+  return getMDXData(
+    path.join(process.cwd(), "app", "(main)", "talent", "posts")
+  ) as {
+    metadata: TalentMetaData;
+    slug: string;
+    content: string;
+  }[];
 }
 
 export function getEventPosts({ latest = false } = {}) {

@@ -14,8 +14,8 @@ const navItems = {
   "/event": {
     name: "Event",
   },
-  "https://discord.gg/7FBpTEXqVj": {
-    name: "Discord",
+  "/talent": {
+    name: "Talent",
   },
 };
 
