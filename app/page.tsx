@@ -8,7 +8,7 @@ export default function Page() {
 
   return (
     <section>
-      <h1 className="mb-4 max-w-xs sm:max-w-auto text-3xl font-bold tracking-tighter">
+      <h1 className="mb-4 max-w-xs sm:max-w-full text-3xl font-bold tracking-tighter">
         The Free & Open Academy
       </h1>
       <p className="mb-8 max-w-lg">
