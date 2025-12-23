@@ -22,7 +22,14 @@ export default function Page() {
         </Link>
         . So, join now!
       </p>
-      <ul className="grid sm:grid-cols-2 gap-4">
+      <a
+        target="_blank"
+        className="px-5 py-2 flex justify-center items-center w-fit bg-purple-600 text-white rounded-full border border-black font-semibold tracking-tight text-sm"
+        href="https://hack.fydemy.com?utm_source=fydemy.com"
+      >
+        🚀 Hackathon (New!)
+      </a>
+      <ul className="grid sm:grid-cols-2 gap-4 mt-14">
         <li>
           <MessageCircleIcon className="size-4 fill-purple-400 mb-2" />
           <h1 className="font-semibold mb-1">English-first environment</h1>
