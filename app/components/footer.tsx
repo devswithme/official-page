@@ -1,6 +1,7 @@
 "use client";
 
 import { logEvent } from "app/lib/utils";
+import Link from "next/link";
 
 export function ArrowIcon({ className }: { className?: string }) {
   return (
@@ -62,6 +63,15 @@ export default function Footer() {
             <ArrowIcon />
             <p className="ml-2 h-7">LinkedIn</p>
           </a>
+        </li>
+        <li>
+          <Link
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            href="/privacy"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">Privacy Policy</p>
+          </Link>
         </li>
       </ul>
       <p className="mt-8 text-neutral-600 dark:text-neutral-300">

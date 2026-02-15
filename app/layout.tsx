@@ -47,9 +47,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // #region agent log
+  if (typeof window === "undefined") {
+    fetch("http://127.0.0.1:7248/ingest/1be3383c-edda-4c27-953f-67dbc4c70846", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        location: "app/layout.tsx:RootLayout",
+        message: "SSR render html",
+        data: { env: "server", hasStyleProp: false },
+        timestamp: Date.now(),
+        hypothesisId: "A",
+      }),
+    }).catch(() => {});
+  }
+  // #endregion
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cx(
         "text-black bg-white dark:text-white dark:bg-black",
         GeistSans.variable,
